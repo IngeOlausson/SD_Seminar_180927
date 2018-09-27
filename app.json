@@ -1,0 +1,26 @@
+{
+  "id": "1eef949f-37c2-4a82-8ed0-8836a4a5d05b",
+  "name": "SD Seminar",
+  "publisher": "IOL",
+  "brief": "Seminar Module",
+  "description": "Seminar Module",
+  "version": "1.0.0.0",
+  "compatibilityId": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": "11.0.0.0",
+  "features": "TranslationFile",
+  "showMyCode": true,
+  "target": "Internal",
+  "idRange": {
+    "from": 123456700,
+    "to": 123456799
+  }
+}
