@@ -13,13 +13,13 @@ tableextension 123456700 "CSD Resource" extends Resource
         }
         modify(Type)
         {
-            OptionCaption = 'Instructor|External';
+            OptionCaption = 'Instructor,Room';
         }
         field(123456701;"CSD Resource Type";Option)
         {
             Caption = 'Resource Type';
             OptionMembers = Internal,External;
-            OptionCaption = 'Internal|External';
+            OptionCaption = 'Internal,External';
         }
         field(123456702;"CSD Maximum Participants";Integer)
         {
