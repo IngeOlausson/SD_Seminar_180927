@@ -61,7 +61,8 @@ table 123456701 "CSD Seminar"
             Caption = 'Comment';
             Editable = false;
             //FieldClass = FlowField;
-            // Calcformula
+            //FieldClass = FlowField;
+            //Calcformula = exists("CSD Seminar Comment Line" where("Table Name" = const("Seminar"),"No."=field("No.")));
         }
         field(100;"Seminar Price";Decimal)
         {
@@ -103,7 +104,7 @@ table 123456701 "CSD Seminar"
     
     var
         SeminarSetup:Record "CSD Seminar Setup";
-        //CommentLine:Record
+        CommentLine:Record "CSD Seminar Comment Line";
         Seminar:Record "CSD Seminar";
         GenProdPostingGroup:Record "Gen. Product Posting Group";
         NoSeriesMgt:Codeunit NoSeriesManagement;
