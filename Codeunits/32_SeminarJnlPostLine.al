@@ -1,64 +1,72 @@
 codeunit 123456732 "CSD Seminar Jnl.-Post Line"
-   // CSD1.00 - 2018-01-01 - D. E. Veloper
-    //   Chapter 7 - Lab 2-8
+// CSD1.00 - 2018-01-01 - D. E. Veloper
+// Chapter 7 - Lab 2-2
 {
     TableNo = "CSD Seminar Journal Line";
+
     trigger OnRun();
     begin
-        // Is this correct?
         RunWithCheck(Rec);
-           
     end;
 
-    
     var
-        SeminarJnlLine : Record "CSD Seminar Journal Line";
-        SeminarLedgerEntry  : Record "CSD Seminar Ledger Entry";
-        SeminarRegister : Record "CSD Seminar Register";
-        SeminarJnlCheckLine : Codeunit "CSD Seminar Jnl.-Check Line";
-        NextEntryNo : Integer;
-        
-    procedure "RunWithCheck"(var SeminarJnlLine2 : Record "CSD Seminar Journal Line");
+        SeminarJnlLine: Record "CSD Seminar Journal Line";
+        SeminarLedgerEntry: Record "CSD Seminar Ledger Entry";
+        SeminarRegister: Record "CSD Seminar Register";
+        SeminarJnlCheckLine: Codeunit "CSD Seminar Jnl.-Check Line";
+        NextEntryNo: Integer;
+
+    procedure RunWithCheck(var SeminarJnLine2: Record "CSD Seminar Journal Line");
     var
-        myInt : Integer;
+        myInt: Integer;
     begin
-        with SeminarJnlLine2 do begin
-            SeminarJnlLine:=SeminarJnlLine2;
+        with SeminarJnLine2 do
+        begin
+            SeminarJnlLine := SeminarJnLine2;
             Code();
-            SeminarJnlLine2:=SeminarJnlLine;
-        end;   
+            SeminarJnLine2 := SeminarJnlLine;
+        end;
     end;
+
     local procedure Code();
     var
-        myInt : Integer;
+        myInt: Integer;
     begin
-        with SeminarJnlLine do begin        
+        with SeminarJnlLine do
+        begin
+            if EmptyLine then
+                exit;
+
+            SeminarJnlCheckLine.RunCheck(SeminarJnlLine);
+
             if NextEntryNo = 0 then begin
                 SeminarLedgerEntry.LockTable;
                 if SeminarLedgerEntry.FindLast then
                     NextEntryNo := SeminarLedgerEntry."Entry No.";
-                NextEntryNo += 1;
-            end;  
-            if ("Document Date" = 0D) then
-                "Document Date" := "Posting Date";  
+                NextEntryNo := NextEntryNo + 1;
+            end;
+
+            if "Document Date" = 0D then
+                "Document Date" := "Posting Date";
+
             if SeminarRegister."No." = 0 then begin
-                SeminarRegister.LockTable;
-                if (not SeminarRegister.findlast) or (SeminarRegister."To Entry No." <> 0) then begin
-                    SeminarRegister.Init;
-                    SeminarRegister."No." += 1;
+                SeminarRegister.LOCKTable;
+                if(not SeminarRegister.FINDLAST) or(SeminarRegister."To Entry No." <> 0) then begin
+                    SeminarRegister.INIT;
+                    SeminarRegister."No." := SeminarRegister."No." + 1;
                     SeminarRegister."From Entry No." := NextEntryNo;
                     SeminarRegister."To Entry No." := NextEntryNo;
-                    SeminarRegister."Creation Date" := Today;
+                    SeminarRegister."Creation Date" := TODAY;
                     SeminarRegister."Source Code" := "Source Code";
                     SeminarRegister."Journal Batch Name" := "Journal Batch Name";
-                    SeminarRegister."User ID" := UserId;
+                    SeminarRegister."User ID" := USERID;
                     SeminarRegister.Insert;
                 end;
             end;
             SeminarRegister."To Entry No." := NextEntryNo;
             SeminarRegister.Modify;
 
-            SeminarLedgerEntry.Init;
+            SeminarLedgerEntry.INIT;
             SeminarLedgerEntry."Seminar No." := "Seminar No.";
             SeminarLedgerEntry."Posting Date" := "Posting Date";
             SeminarLedgerEntry."Document Date" := "Document Date";
@@ -84,12 +92,11 @@ codeunit 123456732 "CSD Seminar Jnl.-Post Line"
             SeminarLedgerEntry."Journal Batch Name" := "Journal Batch Name";
             SeminarLedgerEntry."Source Code" := "Source Code";
             SeminarLedgerEntry."Reason Code" := "Reason Code";
-            SeminarLedgerEntry."No. Series" :=  "Posting No. Series";
+            SeminarLedgerEntry."No. Series" := "Posting No. Series";
+            SeminarLedgerEntry."User ID" := USERID;
             SeminarLedgerEntry."Entry No." := NextEntryNo;
-            NextEntryNo += 1;
-            SeminarLedgerEntry.Insert;
-
-
+            SeminarLedgerEntry.insert;
+            NextEntryNo := NextEntryNo + 1;
         end;
     end;
 }
