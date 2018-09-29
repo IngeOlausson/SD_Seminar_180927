@@ -45,6 +45,7 @@ table 123456733 "CSD Seminar Register"
                 UserMgt.LookupUserID("User ID");
             end;
         }
+
         field(7;"Journal Batch Name";Code[10])
         {
             Caption = 'Journal Batch Name';
@@ -62,6 +63,10 @@ table 123456733 "CSD Seminar Register"
         key(Key3;"Source Code","Creation Date")
         {
         }
+    }
+
+    fieldgroups
+    {
     }
 }
 

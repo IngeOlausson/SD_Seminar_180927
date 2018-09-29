@@ -39,14 +39,6 @@ page 123456722 "CSD Seminar Registers"
         }
         area(factboxes)
         {
-            systempart("Links";Links)
-            {
-
-            }
-            systempart("Notes";Notes)
-            {
-
-            }                        
         }
     }
 

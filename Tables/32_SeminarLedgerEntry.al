@@ -1,14 +1,13 @@
 table 123456732 "CSD Seminar Ledger Entry"
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
-    //   Chapter 7 - Lab 1
+    //   Chapter 7 - Lab 1 - 3
     //     - Created new table
 
     Caption = 'Seminar Ledger Entry';
 
     fields
     {
-        
         field(1;"Entry No.";Integer)
         {
             Caption = 'Entry No.';
@@ -135,20 +134,20 @@ table 123456732 "CSD Seminar Ledger Entry"
             Caption = 'Reason Code';
             TableRelation = "Reason Code";
         }
-        field(27;"No. Series";Code[10])
+        field(27;"Posting No. Series";Code[10])
         {
-            Caption = 'No. Series';
+            Caption = 'Posting No. Series';
             TableRelation = "No. Series";
         }
-        field(28;"User ID";Code[50])
+        field(28;"User Id";code[50])
         {
-            Caption = 'User ID';
-            TableRelation = User where("User Name"=field("User ID"));
+            TableRelation=user where("User Name"=field("User Id"));
+            ValidateTableRelation=false;
             trigger OnLookup();
             var
                 UserMgt : Codeunit "User Management";
             begin
-                UserMgt.LookupUserID("User ID");
+                usermgt.LookupUserID("User Id");
             end;
         }
     }
@@ -158,6 +157,10 @@ table 123456732 "CSD Seminar Ledger Entry"
         key(Key1;"Entry No.")
         {
         }
+    }
+
+    fieldgroups
+    {
     }
 }
 

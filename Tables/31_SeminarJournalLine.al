@@ -1,7 +1,7 @@
 table 123456731 "CSD Seminar Journal Line"
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
-    //   Chapter 7 - Lab 1
+    //   Chapter 7 - Lab 1 - 2
     //     - Created new table
 
     Caption = 'Seminar Journal Line';
@@ -24,9 +24,10 @@ table 123456731 "CSD Seminar Journal Line"
         field(4;"Posting Date";Date)
         {
             Caption = 'Posting Date';
+
             trigger OnValidate();
             begin
-                Validate("Document Date","Posting Date")                
+                Validate("Document Date","Posting Date");
             end;
         }
         field(5;"Document Date";Date)
@@ -155,9 +156,10 @@ table 123456731 "CSD Seminar Journal Line"
         {
         }
     }
-    procedure EmptyLine() : Boolean;
-    begin
-        exit(("Seminar No." = '') AND (Quantity = 0)); 
-    end;
+
+procedure EmptyLine() : Boolean;
+begin
+    exit(("Seminar No." = '') and (Quantity = 0));
+end;
 }
 
