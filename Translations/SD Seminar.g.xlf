@@ -3,42 +3,42 @@
   <file datatype="xml" source-language="en-US" original="SD Seminar">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 997952810 - NamedType 3114637384" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 1834765348" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>There is no participant to post.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 3752334001" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 2472461965" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting lines              #2######\</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 95063322" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 3110158582" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 732759939" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 2941249559" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration %1  -&gt; Posted Reg. %2</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 1370456556" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 3578946176" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The combination of dimensions used in %1 is blocked. %2</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 2008153173" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 4216642793" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The combination of dimensions used in %1,  line no. %2 is blocked. %3</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 2645849790" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 559372114" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The dimensions used in %1 are invalid. %2</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
         </trans-unit>
-        <trans-unit id="Codeunit 997952810 - NamedType 3283546407" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 997952810 - NamedType 390463091" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>The dimensions used in %1, line no. %2 are invalid. %3</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Label</note>
@@ -78,10 +78,30 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
+        <trans-unit id="Page 1944624769 - Action 1940178401 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
+        <trans-unit id="Page 1944624769 - Action 3790110105 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Registration</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
         <trans-unit id="Page 729898515 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
+        </trans-unit>
+        <trans-unit id="Page 729898515 - Action 1940178401 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
+        <trans-unit id="Page 729898515 - Action 3790110105 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Registration</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
         <trans-unit id="Page 1030630441 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar Comment Sheet</source>
@@ -193,6 +213,11 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
+        <trans-unit id="Page 2994756472 - Action 1405007275 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Navigate</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
         <trans-unit id="Page 1014107342 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Lines</source>
           <note from="Developer" annotates="general" priority="2" />
@@ -222,6 +247,11 @@
           <source>Posted Seminar Charges</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
+        </trans-unit>
+        <trans-unit id="Report 206864090 - ReportLabel 300997005" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Registration Header</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Report - Report Label</note>
         </trans-unit>
         <trans-unit id="TableExtension 3154040570 - Change 1878130204 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Instructor,Room</source>
@@ -560,6 +590,11 @@
         </trans-unit>
         <trans-unit id="Table 3775708622 - Field 514695969 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting No.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
+        </trans-unit>
+        <trans-unit id="Table 3775708622 - Field 2682724073 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Printed</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
