@@ -1,4 +1,6 @@
 page 123456701 "CSD Seminar Card"
+// CSD1.00 - 2018-02-01 - D. E. Veloper
+// Chapter 8 Lab 1-2
 {
     PageType = Card;
     SourceTable = "CSD Seminar";
@@ -91,8 +93,39 @@ page 123456701 "CSD Seminar Card"
                     PromotedIsBig = true;
                     PromotedOnly = true;
                 }
+                action("Ledger Entries")
+                {
+                    Caption = 'Ledger Entries';
+                    RunObject = page "CSD Seminar Ledger Entries";
+                    RunPageLink = "Seminar No." = field("No.");
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    ShortcutKey = "Ctrl+F7";
+                    Image = WarrantyLedger;
+                }
+                action("&Registration")
+                {
+                    Caption = '&Registration';
+                    RunObject = page "CSD Seminar Registration List";
+                    RunPageLink = "Seminar No." = field("No.");
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    Image = Timesheet;                    
+                }
             }
              
+        }
+        area(Processing)
+        {
+            action("Seminar Registration")
+            {
+                RunObject = page "CSD Seminar Registration";
+                RunPageLink = "Seminar No." = field("No.");
+                RunPageMode = Create;
+                Promoted = true;
+                PromotedCategory = New;
+                Image = NewTimesheet;                
+            }
         }
     }
 }

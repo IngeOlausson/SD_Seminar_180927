@@ -92,7 +92,7 @@ codeunit 123456732 "CSD Seminar Jnl.-Post Line"
             SeminarLedgerEntry."Journal Batch Name" := "Journal Batch Name";
             SeminarLedgerEntry."Source Code" := "Source Code";
             SeminarLedgerEntry."Reason Code" := "Reason Code";
-            SeminarLedgerEntry."No. Series" := "Posting No. Series";
+            SeminarLedgerEntry."Posting No. Series" := "Posting No. Series";
             SeminarLedgerEntry."User ID" := USERID;
             SeminarLedgerEntry."Entry No." := NextEntryNo;
             SeminarLedgerEntry.insert;
